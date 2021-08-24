@@ -10,7 +10,7 @@ import com.mishrole.roomdatabase.data.entity.User
 // Contains the methods used for accessing the database
 @Dao
 interface UserDao {
-
+    // Ignore if the user exists
     @Insert(onConflict = OnConflictStrategy.IGNORE)
     suspend fun addUser(user: User)
 
