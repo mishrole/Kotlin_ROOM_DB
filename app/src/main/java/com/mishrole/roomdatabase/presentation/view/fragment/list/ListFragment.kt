@@ -29,6 +29,8 @@ class ListFragment : Fragment() {
         // Inflate the layout for this fragment
         _binding = FragmentListBinding.inflate(inflater, container, false)
 
+        val view = binding.root
+
         // Recyclerview
         val adapter = ListAdapter()
         val recyclerView = binding.recyclerView
@@ -46,7 +48,7 @@ class ListFragment : Fragment() {
             findNavController().navigate(R.id.action_listFragment_to_addFragment)
         }
 
-        return binding.root
+        return view
 
     }
 

@@ -30,6 +30,8 @@ class AddFragment : Fragment() {
         // Inflate the layout for this fragment
         _binding = FragmentAddBinding.inflate(inflater, container, false)
 
+        val view = binding.root
+
         // Pass the Context and UserViewModel
         mUserViewModel = ViewModelProvider(this).get(UserViewModel::class.java)
 
@@ -37,7 +39,7 @@ class AddFragment : Fragment() {
             insertDataToDatabase()
         }
 
-        return binding.root
+        return view
     }
 
     private fun insertDataToDatabase() {

@@ -4,9 +4,12 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.TextView
+import androidx.constraintlayout.widget.ConstraintLayout
+import androidx.navigation.findNavController
 import androidx.recyclerview.widget.RecyclerView
 import com.mishrole.roomdatabase.R
 import com.mishrole.roomdatabase.data.entity.User
+import com.mishrole.roomdatabase.presentation.view.fragment.list.ListFragmentDirections
 
 class ListAdapter : RecyclerView.Adapter<ListAdapter.MyViewHolder>() {
     // User is our Model Class
@@ -26,6 +29,13 @@ class ListAdapter : RecyclerView.Adapter<ListAdapter.MyViewHolder>() {
         holder.itemView.findViewById<TextView>(R.id.tvListFirstname).text = currentItem.firstname
         holder.itemView.findViewById<TextView>(R.id.tvListLastname).text = currentItem.lastName
         holder.itemView.findViewById<TextView>(R.id.tvListAge).text = currentItem.age.toString()
+        // Listener to row layout
+        holder.itemView.findViewById<ConstraintLayout>(R.id.rowLayout).setOnClickListener {
+            // Pass user object to update fragment
+            val action = ListFragmentDirections.actionListFragmentToUpdateFragment2(currentItem)
+            // When an item in our recyclerview is selected, pass the current item from List Fragment to Update Fragment
+            holder.itemView.findNavController().navigate(action)
+        }
     }
 
     override fun getItemCount(): Int {
