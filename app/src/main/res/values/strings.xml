@@ -18,5 +18,6 @@
     <string name="firstname">First Name</string>
     <string name="lastname">Last Name</string>
     <string name="age">Age</string>
+    <string name="action_delete">Delete</string>
 
 </resources>
