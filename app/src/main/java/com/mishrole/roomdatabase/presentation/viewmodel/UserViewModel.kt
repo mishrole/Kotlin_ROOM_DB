@@ -15,7 +15,7 @@ import kotlinx.coroutines.launch
 class UserViewModel(application: Application): AndroidViewModel(application) {
     // An AndroidViewModel is different from a regular ViewModel, it contains application reference
 
-    private val readAllData: LiveData<List<User>>
+    val readAllData: LiveData<List<User>>
     private val repository: UserRepository
 
     // Executed at first when our ViewModel is called

@@ -1,4 +1,4 @@
-package com.mishrole.roomdatabase.presentation.fragment.add
+package com.mishrole.roomdatabase.presentation.view.fragment.add
 
 import android.os.Bundle
 import android.text.Editable
@@ -13,7 +13,6 @@ import androidx.navigation.fragment.findNavController
 import com.mishrole.roomdatabase.R
 import com.mishrole.roomdatabase.data.entity.User
 import com.mishrole.roomdatabase.databinding.FragmentAddBinding
-import com.mishrole.roomdatabase.databinding.FragmentListBinding
 import com.mishrole.roomdatabase.presentation.viewmodel.UserViewModel
 
 class AddFragment : Fragment() {

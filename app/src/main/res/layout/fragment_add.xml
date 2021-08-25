@@ -5,7 +5,7 @@
     android:id="@+id/ConstraintLayout"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".presentation.fragment.add.AddFragment">
+    tools:context=".presentation.view.fragment.add.AddFragment">
 
     <EditText
         android:id="@+id/edtAddFirstname"

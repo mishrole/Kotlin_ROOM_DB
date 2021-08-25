@@ -7,7 +7,7 @@
 
     <fragment
         android:id="@+id/listFragment"
-        android:name="com.mishrole.roomdatabase.presentation.fragment.list.ListFragment"
+        android:name="com.mishrole.roomdatabase.presentation.view.fragment.list.ListFragment"
         android:label="List"
         tools:layout="@layout/fragment_list">
         <action
@@ -19,7 +19,7 @@
     </fragment>
     <fragment
         android:id="@+id/addFragment"
-        android:name="com.mishrole.roomdatabase.presentation.fragment.add.AddFragment"
+        android:name="com.mishrole.roomdatabase.presentation.view.fragment.add.AddFragment"
         android:label="Add"
         tools:layout="@layout/fragment_add">
         <action
