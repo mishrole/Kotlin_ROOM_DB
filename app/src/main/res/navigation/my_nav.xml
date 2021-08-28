@@ -19,6 +19,9 @@
         <action
             android:id="@+id/action_listFragment_to_updateFragment2"
             app:destination="@id/updateFragment" />
+        <action
+            android:id="@+id/action_listFragment_to_gpsFragment"
+            app:destination="@id/gpsFragment" />
     </fragment>
     <fragment
         android:id="@+id/addFragment"
@@ -40,5 +43,14 @@
         <argument
             android:name="currentUser"
             app:argType="com.mishrole.roomdatabase.data.entity.User" />
+    </fragment>
+    <fragment
+        android:id="@+id/gpsFragment"
+        android:name="com.mishrole.roomdatabase.presentation.view.fragment.gps.GpsFragment"
+        android:label="gpsFragment"
+        tools:layout="@layout/fragment_gps" >
+        <action
+            android:id="@+id/action_gpsFragment_to_listFragment"
+            app:destination="@id/listFragment" />
     </fragment>
 </navigation>

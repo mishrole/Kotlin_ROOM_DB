@@ -44,6 +44,10 @@ class ListFragment : Fragment() {
             adapter.setData(user)
         })
 
+        binding.fabCords.setOnClickListener {
+            findNavController().navigate(R.id.action_listFragment_to_gpsFragment)
+        }
+
         binding.fabAdd.setOnClickListener {
             findNavController().navigate(R.id.action_listFragment_to_addFragment)
         }
